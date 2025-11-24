@@ -1,0 +1,1891 @@
+options:
+  parameters:
+    author: ''
+    catch_exceptions: 'True'
+    category: '[GRC Hier Blocks]'
+    cmake_opt: ''
+    comment: ''
+    copyright: ''
+    description: ''
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: qt_gui
+    hier_block_src_path: '.:'
+    id: epic
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: 'True'
+    run_command: '{python} -u {filename}'
+    run_options: prompt
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: Not titled yet
+    window_size: (1000,1000)
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 8]
+    rotation: 0
+    state: enabled
+
+blocks:
+- name: AGC_set
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: AGC_set
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '0.1'
+    stop: '1'
+    value: '0.2'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [984, 200.0]
+    rotation: 0
+    state: enabled
+- name: Avg_count
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: Avg_count
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '1'
+    step: '1'
+    stop: '12'
+    value: '4'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [344, 40.0]
+    rotation: 0
+    state: enabled
+- name: CFAR_exclution_bins
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: CFAR_exclution_bins
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '1'
+    stop: '100'
+    value: '0'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [832, 632.0]
+    rotation: 0
+    state: disabled
+- name: CFAR_gaurd_cells
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: CFAR_gaurd_cells
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '1'
+    stop: '10'
+    value: '8'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [864, 488.0]
+    rotation: 0
+    state: disabled
+- name: CFAR_threshold
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: CFAR_threshold
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '-200'
+    step: '1'
+    stop: '100'
+    value: '-10'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [992, 632.0]
+    rotation: 0
+    state: disabled
+- name: CFAR_training_cells
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: CFAR_training_cells
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '1'
+    stop: '10'
+    value: '8'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1144, 632.0]
+    rotation: 0
+    state: disabled
+- name: CFAR_velocity_threshold
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: CFAR_velocity_threshold
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '1'
+    stop: '30'
+    value: '0'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [776, 640.0]
+    rotation: 0
+    state: disabled
+- name: FFT
+  id: variable
+  parameters:
+    comment: ''
+    value: 1024*12
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [472, 64.0]
+    rotation: 0
+    state: enabled
+- name: Gamma
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: Gamma
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '0.1'
+    stop: '10'
+    value: '2.2'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1208, 64.0]
+    rotation: 0
+    state: enabled
+- name: Min_display_db
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: Min_display_db
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '-200'
+    step: '10'
+    stop: '20'
+    value: '-40'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [200, 136.0]
+    rotation: 0
+    state: enabled
+- name: TGC_factor
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: TGC_factor
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '0.001'
+    stop: '1'
+    value: '0'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [920, 504.0]
+    rotation: 0
+    state: enabled
+- name: bandwidth
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: bandwidth
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: 100e6
+    step: 100e4
+    stop: 1000e6
+    value: 800e6
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [712, 8.0]
+    rotation: 0
+    state: enabled
+- name: center_freq
+  id: variable
+  parameters:
+    comment: ''
+    value: 5.4e9
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [512, 312.0]
+    rotation: 0
+    state: enabled
+- name: chrip_rate
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: chrip_rate
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '100'
+    step: '100'
+    stop: '4000'
+    value: '500'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [904, 40.0]
+    rotation: 0
+    state: enabled
+- name: chrips_per_batch
+  id: variable
+  parameters:
+    comment: ''
+    value: '64'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [608, 56.0]
+    rotation: 0
+    state: enabled
+- name: delay
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: delay
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '1'
+    stop: '10000'
+    value: '0'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [616, 184.0]
+    rotation: 0
+    state: disabled
+- name: detection_threshold
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: detection_threshold
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0.1'
+    step: '0.05'
+    stop: '1'
+    value: '0.5'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1048, 48.0]
+    rotation: 0
+    state: enabled
+- name: max_display_db
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: max_display_db
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '-100'
+    step: '10'
+    stop: '100'
+    value: '50'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1120, 216.0]
+    rotation: 0
+    state: enabled
+- name: range_cal
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: range_cal
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '1'
+    stop: '500'
+    value: '10'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1016, 352.0]
+    rotation: 0
+    state: disabled
+- name: range_gate_max
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: range_gate_max
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '1'
+    stop: '500'
+    value: '20'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [320, 192.0]
+    rotation: 0
+    state: enabled
+- name: range_gate_min
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: range_gate_min
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '1'
+    stop: '200'
+    value: '4'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [496, 152.0]
+    rotation: 0
+    state: enabled
+- name: range_per_batch
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: range_per_batch
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '16'
+    step: '1'
+    stop: '512'
+    value: '128'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [496, 40.0]
+    rotation: 0
+    state: disabled
+- name: samp_rate
+  id: variable
+  parameters:
+    comment: ''
+    value: '192000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [200, 12]
+    rotation: 0
+    state: enabled
+- name: x_axis_max
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: x_axis_max
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '1'
+    stop: '500'
+    value: '20'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1064, 472.0]
+    rotation: 0
+    state: enabled
+- name: x_axis_min
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: x_axis_min
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '1'
+    stop: '50'
+    value: '0'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1104, 328.0]
+    rotation: 0
+    state: enabled
+- name: y_axis_max
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: y_axis_max
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '1'
+    stop: '30'
+    value: '10'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1216, 472.0]
+    rotation: 0
+    state: enabled
+- name: y_axis_min
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: y_axis_min
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '-20'
+    step: '1'
+    stop: '0'
+    value: '-10'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [960, 344.0]
+    rotation: 0
+    state: enabled
+- name: analog_agc_xx_0
+  id: analog_agc_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    gain: '1.0'
+    max_gain: '65536'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    rate: 1e-4
+    reference: '1.0'
+    type: float
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [424, 296.0]
+    rotation: 0
+    state: disabled
+- name: audio_sink_0
+  id: audio_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    device_name: ''
+    num_inputs: '1'
+    ok_to_block: 'True'
+    samp_rate: samp_rate
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [824, 296.0]
+    rotation: 0
+    state: disabled
+- name: audio_source_0
+  id: audio_source
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    device_name: ''
+    maxoutbuf: '0'
+    minoutbuf: '1024'
+    num_outputs: '2'
+    ok_to_block: 'True'
+    samp_rate: '192000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [0, 232.0]
+    rotation: 0
+    state: enabled
+- name: blocks_complex_to_mag_0
+  id: blocks_complex_to_mag
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [808, 352.0]
+    rotation: 0
+    state: disabled
+- name: blocks_complex_to_mag_squared_0
+  id: blocks_complex_to_mag_squared
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [576, 120.0]
+    rotation: 0
+    state: disabled
+- name: blocks_complex_to_mag_squared_1
+  id: blocks_complex_to_mag_squared
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: FFT
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [808, 120.0]
+    rotation: 0
+    state: disabled
+- name: blocks_delay_0
+  id: blocks_delay
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    delay: '960'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_ports: '1'
+    showports: 'False'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [536, 264.0]
+    rotation: 0
+    state: disabled
+- name: blocks_delay_1
+  id: blocks_delay
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    delay: '960'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_ports: '1'
+    showports: 'False'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [736, 264.0]
+    rotation: 0
+    state: disabled
+- name: blocks_delay_2
+  id: blocks_delay
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    delay: '10000'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_ports: '1'
+    showports: 'False'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [592, 264.0]
+    rotation: 0
+    state: disabled
+- name: blocks_float_to_complex_0
+  id: blocks_float_to_complex
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [408, 288.0]
+    rotation: 0
+    state: disabled
+- name: blocks_float_to_complex_1
+  id: blocks_float_to_complex
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [768, 256.0]
+    rotation: 0
+    state: disabled
+- name: blocks_moving_average_xx_0
+  id: blocks_moving_average_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    length: '1000'
+    max_iter: '4000'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale: '1'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [560, 384.0]
+    rotation: 0
+    state: disabled
+- name: blocks_stream_to_vector_0
+  id: blocks_stream_to_vector
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '1024'
+    minoutbuf: '1'
+    num_items: '1024'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [816, 440.0]
+    rotation: 0
+    state: disabled
+- name: blocks_stream_to_vector_1
+  id: blocks_stream_to_vector
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: FFT
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [584, 144.0]
+    rotation: 0
+    state: disabled
+- name: blocks_streams_to_vector_0
+  id: blocks_streams_to_vector
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_streams: '2'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [800, 416.0]
+    rotation: 0
+    state: disabled
+- name: blocks_sub_xx_0
+  id: blocks_sub_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_inputs: '2'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [608, 432.0]
+    rotation: 0
+    state: disabled
+- name: blocks_sub_xx_1
+  id: blocks_sub_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_inputs: '2'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [600, 104.0]
+    rotation: 0
+    state: disabled
+- name: blocks_sub_xx_2
+  id: blocks_sub_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_inputs: '2'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [816, 176.0]
+    rotation: 0
+    state: disabled
+- name: blocks_vector_to_stream_0
+  id: blocks_vector_to_stream
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: FFT
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [976, 64.0]
+    rotation: 0
+    state: disabled
+- name: epy_block_0
+  id: epy_block
+  parameters:
+    _source_code: "import numpy as np\nfrom gnuradio import gr\n\nclass blk(gr.sync_block):\n\
+      \    \"\"\"\n    measure_chirp_freq:\n      A simple example block that:\n \
+      \      - Takes a single float input (sync pulse).\n       - Detects rising edges\
+      \ above a threshold.\n       - For each edge after the first, compute the chirp\
+      \ frequency in Hz\n         = fs / (edge_index - last_edge_index), where fs\
+      \ is sample_rate.\n       - Output that frequency as a float.\n         We produce\
+      \ the same freq value for all samples from this edge\n         until the next\
+      \ edge is found, for demonstration purposes.\n    \"\"\"\n\n    def __init__(self,\
+      \ threshold=0.5, sample_rate=96000.0):\n        \"\"\"\n        threshold: amplitude\
+      \ threshold for rising-edge detection\n        sample_rate: the sampling rate\
+      \ of the incoming stream\n        \"\"\"\n        gr.sync_block.__init__(\n\
+      \            name='measure_chirp_freq',\n            in_sig=[np.float32],  \
+      \ # 1 float input\n            out_sig=[np.float32]   # 1 float output\n   \
+      \     )\n        self.threshold = threshold\n        self.sample_rate = sample_rate\n\
+      \n        # We store the \"running\" sample index across multiple work() calls\n\
+      \        self.running_index = 0\n        # The index of the last rising edge\
+      \ (None if we haven't found one yet)\n        self.last_edge_index = None\n\
+      \        # The frequency we most recently computed\n        self.current_freq\
+      \ = 0.0\n\n    def work(self, input_items, output_items):\n        in0 = input_items[0]\
+      \   # shape: (n,) \n        out0 = output_items[0] # shape: (n,)\n\n       \
+      \ n = len(in0)\n        # Convert to 0 or 1 by threshold\n        bin_sync =\
+      \ (in0 > self.threshold).astype(np.int8)\n        # find rising edges\n    \
+      \    diff = np.diff(bin_sync)\n        edge_indices = np.where(diff == 1)[0]\
+      \ + 1  # local indices in [0..n-1]\n\n        out_idx = 0  # how many samples\
+      \ of out we produce\n        # We'll produce an output for each sample, \n \
+      \       # but the freq value is constant between edges.\n\n        for i in\
+      \ range(n):\n            # check if i is in the edge_indices\n            #\
+      \ better approach: if i in edge_indices:\n            # but that is O(n * #edges).\
+      \ We'll do a simpler approach:\n            # Actually, let's just see if i\
+      \ is an edge in a dictionary\n            # but to keep it short, we'll scan\
+      \ edge_indices\n            # (This is not the most efficient, but it's simpler\
+      \ to read.)\n            if i in edge_indices:\n                # Global index\
+      \ of this edge\n                global_edge_idx = self.running_index + i\n \
+      \               if self.last_edge_index is not None:\n                    delta_samples\
+      \ = global_edge_idx - self.last_edge_index\n                    # compute freq\
+      \ in Hz\n                    if delta_samples > 0:\n                       \
+      \ self.current_freq = self.sample_rate / float(delta_samples)\n            \
+      \    # update last edge\n                self.last_edge_index = global_edge_idx\n\
+      \n            # produce the current_freq\n            out0[out_idx] = self.current_freq\n\
+      \            out_idx += 1\n\n        # we've used n input samples, produced\
+      \ n output samples\n        self.running_index += n\n        self.consume_each(n)\n\
+      \        return n\n"
+    affinity: ''
+    alias: ''
+    comment: ''
+    example_param: '1.0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    _io_cache: ('Embedded Python Block', 'blk', [('example_param', '1.0')], [('0',
+      'complex', 1)], [('0', 'complex', 1)], 'Embedded Python Block example - a simple
+      multiply const', ['example_param'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [600, 552.0]
+    rotation: 0
+    state: disabled
+- name: epy_block_1
+  id: epy_block
+  parameters:
+    TGC_enabled: 'True'
+    TGC_factor: TGC_factor
+    _source_code: "import numpy as np\nimport matplotlib.pyplot as plt\nfrom gnuradio\
+      \ import gr\n\nclass fmcw_chirp_processor(gr.sync_block):\n    \"\"\"\n    GNU\
+      \ Radio Embedded Python Block for Real-Time FMCW Radar Processing.\n\n    This\
+      \ version has been cleaned up to remove unused parameters (decimation, bandwidth,\n\
+      \    fft_intensity, max_range, hilbert). In addition, it implements Time Gain\
+      \ Compensation (TGC)\n    in the range domain: returns from farther ranges are\
+      \ amplified more.\n    \n    Retained features include:\n      - AGC (auto gain\
+      \ control),\n      - Pre-FFT windowing (hann/hamming/blackman/none),\n     \
+      \ - MTI filtering (modes: \"off\", \"single\", \"double\"),\n      - Coherent\
+      \ averaging,\n      - Range gating via range_gate_start_m and range_gate_stop_m,\n\
+      \      - Manual axis calibration (x_axis_min/x_axis_max and y_axis_min/y_axis_max).\n\
+      \n    New TGC parameters:\n      - TGC_enabled (bool): enable TGC if True.\n\
+      \      - TGC_factor (float, 1/m): linear gain factor; gain(r) = 1 + TGC_factor\
+      \ * r.\n    \"\"\"\n    \n    def __init__(self,\n                 samp_rate=192e3,\n\
+      \                 chirp_rate=400.0,\n                 threshold=0.5,\n     \
+      \            chirps_per_batch=16,\n                 fft_size=0,\n          \
+      \       mti_mode=\"single\",          # Options: \"off\", \"single\", \"double\"\
+      \n                 coherent_avg_count=1,\n                 range_gate_start_m=0.0,\n\
+      \                 range_gate_stop_m=0.0,\n                 min_display_db=-60.0,\n\
+      \                 max_display_db=20.0,\n                 agc_enabled=True,\n\
+      \                 agc_target=0.5,\n                 window_type=\"hann\",  \
+      \       # Options: \"hann\", \"hamming\", \"blackman\", \"none\"\n         \
+      \        gamma=1.0,\n                 # Manual axis calibration:\n         \
+      \        x_axis_min=0.0,\n                 x_axis_max=10.0,\n              \
+      \   y_axis_min=0.0,\n                 y_axis_max=64.0,\n                 # New\
+      \ TGC parameters:\n                 TGC_enabled=True,\n                 TGC_factor=0.001):\n\
+      \        gr.sync_block.__init__(\n            self,\n            name=\"FMCW\
+      \ Chirp Processor\",\n            in_sig=[np.float32, np.float32],\n       \
+      \     out_sig=None\n        )\n        # Save parameters\n        self.samp_rate\
+      \ = samp_rate\n        self.chirp_rate = chirp_rate\n        self.threshold\
+      \ = threshold\n        self.chirps_per_batch = int(chirps_per_batch)\n     \
+      \   self.fft_size = int(fft_size) if fft_size > 0 else 0\n        self.mti_mode\
+      \ = mti_mode.lower().strip()\n        self.coherent_avg_count = int(coherent_avg_count)\n\
+      \        self.range_gate_start_m = range_gate_start_m\n        self.range_gate_stop_m\
+      \ = range_gate_stop_m\n        self.min_display_db = min_display_db\n      \
+      \  self.max_display_db = max_display_db\n        self.agc_enabled = agc_enabled\n\
+      \        self.agc_target = agc_target\n        self.window_type = window_type.lower().strip()\n\
+      \        self.gamma = gamma\n        \n        # Manual axis calibration\n \
+      \       self.x_axis_min = x_axis_min\n        self.x_axis_max = x_axis_max\n\
+      \        self.y_axis_min = y_axis_min\n        self.y_axis_max = y_axis_max\n\
+      \        \n        # Fixed internal parameter for bandwidth (not user\u2011\
+      adjustable)\n        self.bandwidth = 200e6\n        # Derived radar parameters\n\
+      \        self.chirp_duration = 1.0 / self.chirp_rate\n        self.slope = self.bandwidth\
+      \ / self.chirp_duration  # Hz/s\n        self.c = 3e8  # speed of light\n  \
+      \      \n        # TGC parameters\n        self.TGC_enabled = TGC_enabled\n\
+      \        self.TGC_factor = TGC_factor\n        \n        # Internal state\n\
+      \        self.prev_sync = None\n        self.current_chirp = []\n        self.chirps_buffer\
+      \ = []\n        self.coherent_sum = None\n        self.avg_count = 0\n     \
+      \   \n        # Setup plotting\n        plt.ion()\n        self.fig, self.ax\
+      \ = plt.subplots()\n        self.img = None\n        self.ax.set_title(\"Range-Doppler\
+      \ Map\")\n        self.ax.set_xlabel(\"Range (m)\")\n        self.ax.set_ylabel(\"\
+      Doppler Bin\")\n        self.fig.show()\n        \n    def _apply_mti(self,\
+      \ matrix):\n        \"\"\"\n        Apply MTI filtering along the chirp dimension\
+      \ (axis=0).\n        Modes:\n          - \"off\": no filtering,\n          -\
+      \ \"single\": x[n] - x[n-1],\n          - \"double\": x[n] - 2*x[n-1] + x[n-2].\n\
+      \        \"\"\"\n        if matrix.shape[0] < 2:\n            return matrix\n\
+      \        \n        if self.mti_mode == \"off\":\n            return matrix\n\
+      \        elif self.mti_mode == \"single\":\n            return np.diff(matrix,\
+      \ axis=0)\n        elif self.mti_mode == \"double\":\n            if matrix.shape[0]\
+      \ < 3:\n                return np.diff(matrix, axis=0)\n            return matrix[2:]\
+      \ - 2 * matrix[1:-1] + matrix[:-2]\n        else:\n            return matrix\n\
+      \        \n    def work(self, input_items, output_items):\n        sync_signal\
+      \ = input_items[0]\n        radar_signal = input_items[1]\n        n = len(sync_signal)\n\
+      \        if n == 0:\n            return 0\n        \n        # Detect chirp\
+      \ boundaries based on sync ramp\n        if self.prev_sync is not None:\n  \
+      \          if sync_signal[0] < self.threshold and self.prev_sync >= self.threshold:\n\
+      \                if self.current_chirp:\n                    chirp_array = np.array(self.current_chirp,\
+      \ dtype=np.float32)\n                    self.chirps_buffer.append(chirp_array)\n\
+      \                self.current_chirp = []\n        \n        last_sync = self.prev_sync\
+      \ if self.prev_sync is not None else sync_signal[0]\n        for i in range(n):\n\
+      \            s_val = sync_signal[i]\n            r_val = radar_signal[i]\n \
+      \           if s_val < self.threshold and last_sync >= self.threshold:\n   \
+      \             if self.current_chirp:\n                    chirp_array = np.array(self.current_chirp,\
+      \ dtype=np.float32)\n                    self.chirps_buffer.append(chirp_array)\n\
+      \                self.current_chirp = [r_val]\n            else:\n         \
+      \       self.current_chirp.append(r_val)\n            last_sync = s_val\n  \
+      \      \n        self.prev_sync = last_sync\n        \n        if len(self.chirps_buffer)\
+      \ >= self.chirps_per_batch:\n            batch_size = self.chirps_per_batch\n\
+      \            chirp_batch = self.chirps_buffer[:batch_size]\n            self.chirps_buffer\
+      \ = self.chirps_buffer[batch_size:]\n            \n            # Align chirps\
+      \ to same length\n            min_len = min(len(chirp) for chirp in chirp_batch)\n\
+      \            fft_len = self.fft_size if (self.fft_size and self.fft_size > min_len)\
+      \ else min_len\n            \n            range_fft_list = []\n            for\
+      \ chirp in chirp_batch:\n                x = chirp[:min_len]\n             \
+      \   if self.agc_enabled:\n                    rms = np.sqrt(np.mean(x**2))\n\
+      \                    gain = self.agc_target / (rms + 1e-6)\n               \
+      \     x = x * gain\n                if self.window_type != \"none\":\n     \
+      \               if self.window_type == \"hann\":\n                        w\
+      \ = np.hanning(len(x))\n                    elif self.window_type == \"hamming\"\
+      :\n                        w = np.hamming(len(x))\n                    elif\
+      \ self.window_type == \"blackman\":\n                        w = np.blackman(len(x))\n\
+      \                    else:\n                        w = np.ones(len(x))\n  \
+      \                  x = x * w\n                if fft_len > len(x):\n       \
+      \             x = np.pad(x, (0, fft_len - len(x)), 'constant')\n           \
+      \     else:\n                    x = x[:fft_len]\n                spectrum =\
+      \ np.fft.fft(x)\n                range_fft_list.append(spectrum)\n         \
+      \   \n            range_fft_matrix = np.vstack(range_fft_list)\n           \
+      \ range_fft_matrix = self._apply_mti(range_fft_matrix)\n            if range_fft_matrix.shape[0]\
+      \ == 0:\n                return n\n            \n            doppler_matrix\
+      \ = np.fft.fft(range_fft_matrix, axis=0)\n            doppler_matrix = np.fft.fftshift(doppler_matrix,\
+      \ axes=0)\n            \n            if self.coherent_avg_count > 1:\n     \
+      \           if self.coherent_sum is None:\n                    self.coherent_sum\
+      \ = doppler_matrix.copy()\n                else:\n                    self.coherent_sum\
+      \ += doppler_matrix\n                self.avg_count += 1\n                if\
+      \ self.avg_count < self.coherent_avg_count:\n                    return n\n\
+      \                else:\n                    doppler_matrix = self.coherent_sum\
+      \ / float(self.avg_count)\n                    self.coherent_sum = None\n  \
+      \                  self.avg_count = 0\n            \n            # Compute magnitude\
+      \ before gamma correction\n            magnitude = np.abs(doppler_matrix)\n\
+      \            \n            # Compute range axis from FFT frequency bins (using\
+      \ full sample rate)\n            fft_len_out = magnitude.shape[1]\n        \
+      \    freq_bins_full = np.fft.fftfreq(fft_len_out, d=1.0/self.samp_rate)\n  \
+      \          pos_mask = (freq_bins_full >= 0)\n            freq_bins = freq_bins_full[pos_mask]\n\
+      \            range_axis_full = freq_bins * self.c / (2.0 * self.slope)\n   \
+      \         # Apply TGC: Multiply each range bin by a gain factor that increases\
+      \ with range\n            if self.TGC_enabled:\n                # Linear TGC:\
+      \ gain(r) = 1 + TGC_factor * r\n                gain_curve = 1.0 + self.TGC_factor\
+      \ * range_axis_full\n                magnitude = magnitude[:, pos_mask] * gain_curve[np.newaxis,\
+      \ :]\n            else:\n                magnitude = magnitude[:, pos_mask]\n\
+      \            \n            # Optional gamma correction\n            if self.gamma\
+      \ != 1.0:\n                norm = magnitude / (np.max(magnitude) + 1e-6)\n \
+      \               magnitude = norm ** self.gamma * (np.max(magnitude) + 1e-6)\n\
+      \            rd_map = 20 * np.log10(magnitude + 1e-6)\n            \n      \
+      \      # Optionally apply range gating\n            if self.range_gate_stop_m\
+      \ > self.range_gate_start_m:\n                start_idx = np.searchsorted(range_axis_full,\
+      \ self.range_gate_start_m, side='left')\n                stop_idx = np.searchsorted(range_axis_full,\
+      \ self.range_gate_stop_m, side='right')\n                start_idx = max(0,\
+      \ start_idx)\n                stop_idx = min(len(range_axis_full), stop_idx)\n\
+      \                rd_map = rd_map[:, start_idx:stop_idx]\n                range_axis\
+      \ = range_axis_full[start_idx:stop_idx]\n            else:\n               \
+      \ range_axis = range_axis_full\n            \n            ny = rd_map.shape[0]\n\
+      \            nx = rd_map.shape[1]\n            if nx == 0:\n               \
+      \ return n\n            \n            # Use manual axis extents for display\
+      \ (manual calibration)\n            extent = [self.x_axis_min, self.x_axis_max,\
+      \ self.y_axis_min, self.y_axis_max]\n            \n            if self.img is\
+      \ None:\n                self.img = self.ax.imshow(rd_map,\n               \
+      \                           aspect='auto',\n                               \
+      \           origin='lower',\n                                          extent=extent,\n\
+      \                                          vmin=self.min_display_db,\n     \
+      \                                     vmax=self.max_display_db,\n          \
+      \                                interpolation='nearest')\n                self.ax.set_xlabel(\"\
+      Range (m)\")\n                self.ax.set_ylabel(\"Doppler Bin\")\n        \
+      \        self.fig.colorbar(self.img, ax=self.ax, label=\"Magnitude (dB)\")\n\
+      \            else:\n                self.img.set_data(rd_map)\n            \
+      \    self.img.set_extent(extent)\n                self.img.set_clim(self.min_display_db,\
+      \ self.max_display_db)\n            \n            self.fig.canvas.draw()\n \
+      \           self.fig.canvas.flush_events()\n        \n        return n\n"
+    affinity: ''
+    agc_enabled: 'True'
+    agc_target: AGC_set
+    alias: ''
+    chirp_rate: chrip_rate
+    chirps_per_batch: chrips_per_batch
+    coherent_avg_count: Avg_count
+    comment: ''
+    fft_size: FFT
+    gamma: Gamma
+    max_display_db: max_display_db
+    maxoutbuf: '0'
+    min_display_db: Min_display_db
+    minoutbuf: '0'
+    mti_mode: '"off"'
+    range_gate_start_m: range_gate_min
+    range_gate_stop_m: range_gate_max
+    samp_rate: samp_rate
+    threshold: detection_threshold
+    window_type: '"hamming"'
+    x_axis_max: x_axis_max
+    x_axis_min: x_axis_min
+    y_axis_max: y_axis_max
+    y_axis_min: y_axis_min
+  states:
+    _io_cache: '(''FMCW Chirp Processor'', ''fmcw_chirp_processor'', [(''samp_rate'',
+      ''192000.0''), (''chirp_rate'', ''400.0''), (''threshold'', ''0.5''), (''chirps_per_batch'',
+      ''16''), (''fft_size'', ''0''), (''mti_mode'', "''single''"), (''coherent_avg_count'',
+      ''1''), (''range_gate_start_m'', ''0.0''), (''range_gate_stop_m'', ''0.0''),
+      (''min_display_db'', ''-60.0''), (''max_display_db'', ''20.0''), (''agc_enabled'',
+      ''True''), (''agc_target'', ''0.5''), (''window_type'', "''hann''"), (''gamma'',
+      ''1.0''), (''x_axis_min'', ''0.0''), (''x_axis_max'', ''10.0''), (''y_axis_min'',
+      ''0.0''), (''y_axis_max'', ''64.0''), (''TGC_enabled'', ''True''), (''TGC_factor'',
+      ''0.001'')], [(''0'', ''float'', 1), (''1'', ''float'', 1)], [], ''\n    GNU
+      Radio Embedded Python Block for Real-Time FMCW Radar Processing.\n\n    This
+      version has been cleaned up to remove unused parameters (decimation, bandwidth,\n    fft_intensity,
+      max_range, hilbert). In addition, it implements Time Gain Compensation (TGC)\n    in
+      the range domain: returns from farther ranges are amplified more.\n    \n    Retained
+      features include:\n      - AGC (auto gain control),\n      - Pre-FFT windowing
+      (hann/hamming/blackman/none),\n      - MTI filtering (modes: "off", "single",
+      "double"),\n      - Coherent averaging,\n      - Range gating via range_gate_start_m
+      and range_gate_stop_m,\n      - Manual axis calibration (x_axis_min/x_axis_max
+      and y_axis_min/y_axis_max).\n\n    New TGC parameters:\n      - TGC_enabled
+      (bool): enable TGC if True.\n      - TGC_factor (float, 1/m): linear gain factor;
+      gain(r) = 1 + TGC_factor * r.\n    '', [''TGC_enabled'', ''TGC_factor'', ''agc_enabled'',
+      ''agc_target'', ''chirp_rate'', ''chirps_per_batch'', ''coherent_avg_count'',
+      ''fft_size'', ''gamma'', ''max_display_db'', ''min_display_db'', ''mti_mode'',
+      ''range_gate_start_m'', ''range_gate_stop_m'', ''samp_rate'', ''threshold'',
+      ''window_type'', ''x_axis_max'', ''x_axis_min'', ''y_axis_max'', ''y_axis_min''])'
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [680, 184.0]
+    rotation: 0
+    state: enabled
+- name: fft_vxx_0
+  id: fft_vxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    fft_size: FFT
+    forward: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    nthreads: '1'
+    shift: 'True'
+    type: complex
+    window: window.blackmanharris(FFT)
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [488, 448.0]
+    rotation: 0
+    state: disabled
+- name: high_pass_filter_0
+  id: high_pass_filter
+  parameters:
+    affinity: ''
+    alias: ''
+    beta: '6.76'
+    comment: ''
+    cutoff_freq: '2000'
+    decim: '1'
+    gain: '1'
+    interp: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    type: fir_filter_fff
+    width: '1000'
+    win: window.WIN_HAMMING
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [496, 344.0]
+    rotation: 0
+    state: disabled
+- name: hilbert_fc_0
+  id: hilbert_fc
+  parameters:
+    affinity: ''
+    alias: ''
+    beta: '6.76'
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_taps: '65'
+    win: window.WIN_BLACKMAN_hARRIS
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [376, 208.0]
+    rotation: 0
+    state: disabled
+- name: low_pass_filter_0
+  id: low_pass_filter
+  parameters:
+    affinity: ''
+    alias: ''
+    beta: '6.76'
+    comment: ''
+    cutoff_freq: samp_rate/2
+    decim: '1'
+    gain: '1'
+    interp: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    type: fir_filter_fff
+    width: '2000'
+    win: window.WIN_HAMMING
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [344, 376.0]
+    rotation: 0
+    state: disabled
+- name: low_pass_filter_1
+  id: low_pass_filter
+  parameters:
+    affinity: ''
+    alias: ''
+    beta: '6.76'
+    comment: ''
+    cutoff_freq: samp_rate/2
+    decim: '2'
+    gain: '1'
+    interp: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    type: fir_filter_fff
+    width: '20000'
+    win: window.WIN_HAMMING
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [672, 536.0]
+    rotation: 0
+    state: disabled
+- name: low_pass_filter_2
+  id: low_pass_filter
+  parameters:
+    affinity: ''
+    alias: ''
+    beta: '6.76'
+    comment: ''
+    cutoff_freq: samp_rate/2
+    decim: '1'
+    gain: '1'
+    interp: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    type: fir_filter_fff
+    width: '20000'
+    win: window.WIN_HAMMING
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [344, 384.0]
+    rotation: 0
+    state: disabled
+- name: low_pass_filter_2_0
+  id: low_pass_filter
+  parameters:
+    affinity: ''
+    alias: ''
+    beta: '6.76'
+    comment: ''
+    cutoff_freq: samp_rate/2
+    decim: '1'
+    gain: '1'
+    interp: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    type: fir_filter_fff
+    width: '2000'
+    win: window.WIN_HAMMING
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [256, 584.0]
+    rotation: 0
+    state: disabled
+- name: qtgui_histogram_sink_x_0
+  id: qtgui_histogram_sink_x
+  parameters:
+    accum: 'False'
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    autoscale: 'True'
+    axislabels: 'True'
+    bins: '100'
+    color1: '"blue"'
+    color10: '"dark blue"'
+    color2: '"red"'
+    color3: '"green"'
+    color4: '"black"'
+    color5: '"cyan"'
+    color6: '"magenta"'
+    color7: '"yellow"'
+    color8: '"dark red"'
+    color9: '"dark green"'
+    comment: ''
+    grid: 'False'
+    gui_hint: ''
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    legend: 'True'
+    marker1: '-1'
+    marker10: '-1'
+    marker2: '-1'
+    marker3: '-1'
+    marker4: '-1'
+    marker5: '-1'
+    marker6: '-1'
+    marker7: '-1'
+    marker8: '-1'
+    marker9: '-1'
+    name: '""'
+    nconnections: '1'
+    size: '1024'
+    style1: '1'
+    style10: '1'
+    style2: '1'
+    style3: '1'
+    style4: '1'
+    style5: '1'
+    style6: '1'
+    style7: '1'
+    style8: '1'
+    style9: '1'
+    type: float
+    update_time: '0.10'
+    width1: '1'
+    width10: '1'
+    width2: '1'
+    width3: '1'
+    width4: '1'
+    width5: '1'
+    width6: '1'
+    width7: '1'
+    width8: '1'
+    width9: '1'
+    xmax: '1'
+    xmin: '-1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [904, 376.0]
+    rotation: 0
+    state: disabled
+- name: qtgui_sink_x_0
+  id: qtgui_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    bw: samp_rate
+    comment: ''
+    fc: '0'
+    fftsize: '1024'
+    gui_hint: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    name: '""'
+    plotconst: 'True'
+    plotfreq: 'True'
+    plottime: 'True'
+    plotwaterfall: 'True'
+    rate: '10'
+    showports: 'False'
+    showrf: 'False'
+    type: float
+    wintype: window.WIN_BLACKMAN_hARRIS
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [568, 304.0]
+    rotation: 0
+    state: disabled
+- name: qtgui_sink_x_0_0
+  id: qtgui_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    bw: samp_rate
+    comment: ''
+    fc: '0'
+    fftsize: '512'
+    gui_hint: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    name: '""'
+    plotconst: 'True'
+    plotfreq: 'True'
+    plottime: 'True'
+    plotwaterfall: 'True'
+    rate: '10'
+    showports: 'False'
+    showrf: 'False'
+    type: float
+    wintype: window.WIN_BLACKMAN_hARRIS
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [952, 336.0]
+    rotation: 0
+    state: disabled
+- name: qtgui_time_raster_sink_x_0
+  id: qtgui_time_raster_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    axislabels: 'True'
+    color1: '0'
+    color10: '0'
+    color2: '0'
+    color3: '0'
+    color4: '0'
+    color5: '0'
+    color6: '0'
+    color7: '0'
+    color8: '0'
+    color9: '0'
+    comment: ''
+    grid: 'False'
+    gui_hint: ''
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    mult: '[]'
+    name: '""'
+    ncols: 256*4
+    nconnections: '1'
+    nrows: 256*4
+    offset: '[]'
+    samp_rate: samp_rate
+    type: float
+    update_time: '0.10'
+    x_end_value: '0.0'
+    x_label: '""'
+    x_start_value: '0.0'
+    y_end_value: '0.0'
+    y_label: '""'
+    y_start_value: '0.0'
+    zmax: '1'
+    zmin: '-1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [960, 384.0]
+    rotation: 0
+    state: disabled
+- name: qtgui_time_sink_x_0
+  id: qtgui_time_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    autoscale: 'False'
+    axislabels: 'True'
+    color1: blue
+    color10: dark blue
+    color2: red
+    color3: green
+    color4: black
+    color5: cyan
+    color6: magenta
+    color7: yellow
+    color8: dark red
+    color9: dark green
+    comment: ''
+    ctrlpanel: 'True'
+    entags: 'True'
+    grid: 'False'
+    gui_hint: ''
+    label1: Signal 1
+    label10: Signal 10
+    label2: Signal 2
+    label3: Signal 3
+    label4: Signal 4
+    label5: Signal 5
+    label6: Signal 6
+    label7: Signal 7
+    label8: Signal 8
+    label9: Signal 9
+    legend: 'True'
+    marker1: '-1'
+    marker10: '-1'
+    marker2: '-1'
+    marker3: '-1'
+    marker4: '-1'
+    marker5: '-1'
+    marker6: '-1'
+    marker7: '-1'
+    marker8: '-1'
+    marker9: '-1'
+    name: '""'
+    nconnections: '2'
+    size: 1024*2
+    srate: samp_rate
+    stemplot: 'False'
+    style1: '1'
+    style10: '1'
+    style2: '1'
+    style3: '1'
+    style4: '1'
+    style5: '1'
+    style6: '1'
+    style7: '1'
+    style8: '1'
+    style9: '1'
+    tr_chan: '0'
+    tr_delay: '0'
+    tr_level: '0.0'
+    tr_mode: qtgui.TRIG_MODE_FREE
+    tr_slope: qtgui.TRIG_SLOPE_POS
+    tr_tag: '""'
+    type: float
+    update_time: '0.05'
+    width1: '1'
+    width10: '1'
+    width2: '1'
+    width3: '1'
+    width4: '1'
+    width5: '1'
+    width6: '1'
+    width7: '1'
+    width8: '1'
+    width9: '1'
+    ylabel: Amplitude
+    ymax: '1'
+    ymin: '-1'
+    yunit: '""'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [384, 352.0]
+    rotation: 0
+    state: enabled
+- name: qtgui_waterfall_sink_x_0
+  id: qtgui_waterfall_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    axislabels: 'True'
+    bw: samp_rate
+    color1: '0'
+    color10: '0'
+    color2: '0'
+    color3: '0'
+    color4: '0'
+    color5: '0'
+    color6: '0'
+    color7: '0'
+    color8: '0'
+    color9: '0'
+    comment: ''
+    fc: '0'
+    fftsize: '1024'
+    freqhalf: 'True'
+    grid: 'False'
+    gui_hint: ''
+    int_max: '10'
+    int_min: '-140'
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    legend: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    name: '""'
+    nconnections: '1'
+    showports: 'False'
+    type: float
+    update_time: '0.10'
+    wintype: window.WIN_BLACKMAN_hARRIS
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [856, 168.0]
+    rotation: 0
+    state: disabled
+- name: qtgui_waterfall_sink_x_1
+  id: qtgui_waterfall_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    axislabels: 'True'
+    bw: samp_rate
+    color1: '0'
+    color10: '0'
+    color2: '0'
+    color3: '0'
+    color4: '0'
+    color5: '0'
+    color6: '0'
+    color7: '0'
+    color8: '0'
+    color9: '0'
+    comment: ''
+    fc: '0'
+    fftsize: '1024'
+    freqhalf: 'True'
+    grid: 'False'
+    gui_hint: ''
+    int_max: '10'
+    int_min: '-140'
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    legend: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    name: '""'
+    nconnections: '1'
+    showports: 'False'
+    type: float
+    update_time: '0.10'
+    wintype: window.WIN_BLACKMAN_hARRIS
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [864, 184.0]
+    rotation: 0
+    state: disabled
+- name: radar_signal_generator_fmcw_c_0
+  id: radar_signal_generator_fmcw_c
+  parameters:
+    affinity: ''
+    alias: ''
+    amplitude: '1'
+    comment: ''
+    freq_cw: 5.4e9
+    freq_sweep: '10000000'
+    len_key: '"packet_len"'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_cw: '0'
+    samp_down: '0'
+    samp_rate: '20000000'
+    samp_up: '100000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [160, 336.0]
+    rotation: 0
+    state: disabled
+- name: radar_signal_generator_fsk_c_0
+  id: radar_signal_generator_fsk_c
+  parameters:
+    affinity: ''
+    alias: ''
+    amplitude: ''
+    blocks_per_tag: ''
+    comment: ''
+    freq_high: ''
+    freq_low: ''
+    len_key: '"packet_len"'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_per_freq: ''
+    samp_rate: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1120, 432.0]
+    rotation: 0
+    state: disabled
+- name: radar_ts_fft_cc_0
+  id: radar_ts_fft_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    len_key: ' "packet_len"'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    packet_len: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [920, 528.0]
+    rotation: 0
+    state: disabled
+
+connections:
+- [analog_agc_xx_0, '0', blocks_moving_average_xx_0, '0']
+- [analog_agc_xx_0, '0', low_pass_filter_1, '0']
+- [audio_source_0, '0', blocks_float_to_complex_0, '0']
+- [audio_source_0, '0', blocks_float_to_complex_1, '0']
+- [audio_source_0, '0', epy_block_1, '1']
+- [audio_source_0, '0', low_pass_filter_0, '0']
+- [audio_source_0, '0', low_pass_filter_1, '0']
+- [audio_source_0, '0', low_pass_filter_2, '0']
+- [audio_source_0, '0', qtgui_time_sink_x_0, '1']
+- [audio_source_0, '1', epy_block_1, '0']
+- [audio_source_0, '1', low_pass_filter_2_0, '0']
+- [audio_source_0, '1', qtgui_time_sink_x_0, '0']
+- [blocks_complex_to_mag_0, '0', qtgui_sink_x_0, '0']
+- [blocks_complex_to_mag_squared_0, '0', qtgui_sink_x_0, '0']
+- [blocks_complex_to_mag_squared_1, '0', blocks_vector_to_stream_0, '0']
+- [blocks_delay_0, '0', blocks_sub_xx_0, '1']
+- [blocks_delay_0, '0', blocks_sub_xx_1, '1']
+- [blocks_delay_1, '0', blocks_sub_xx_2, '1']
+- [blocks_delay_2, '0', qtgui_sink_x_0, '0']
+- [blocks_float_to_complex_0, '0', analog_agc_xx_0, '0']
+- [blocks_float_to_complex_0, '0', blocks_delay_0, '0']
+- [blocks_float_to_complex_0, '0', blocks_sub_xx_0, '0']
+- [blocks_float_to_complex_0, '0', high_pass_filter_0, '0']
+- [blocks_float_to_complex_0, '0', low_pass_filter_0, '0']
+- [blocks_float_to_complex_1, '0', blocks_delay_1, '0']
+- [blocks_float_to_complex_1, '0', blocks_sub_xx_2, '0']
+- [blocks_float_to_complex_1, '0', qtgui_sink_x_0, '0']
+- [blocks_float_to_complex_1, '0', qtgui_time_sink_x_0, '0']
+- [blocks_moving_average_xx_0, '0', qtgui_sink_x_0, '0']
+- [blocks_stream_to_vector_1, '0', blocks_complex_to_mag_squared_1, '0']
+- [blocks_stream_to_vector_1, '0', fft_vxx_0, '0']
+- [blocks_sub_xx_0, '0', qtgui_sink_x_0, '0']
+- [blocks_sub_xx_1, '0', audio_sink_0, '0']
+- [blocks_sub_xx_1, '0', low_pass_filter_1, '0']
+- [blocks_sub_xx_1, '0', qtgui_sink_x_0, '0']
+- [blocks_sub_xx_1, '0', qtgui_time_sink_x_0, '0']
+- [blocks_sub_xx_2, '0', qtgui_sink_x_0, '0']
+- [blocks_vector_to_stream_0, '0', qtgui_sink_x_0, '0']
+- [fft_vxx_0, '0', blocks_vector_to_stream_0, '0']
+- [high_pass_filter_0, '0', blocks_complex_to_mag_0, '0']
+- [high_pass_filter_0, '0', blocks_delay_0, '0']
+- [high_pass_filter_0, '0', blocks_sub_xx_0, '0']
+- [high_pass_filter_0, '0', qtgui_histogram_sink_x_0, '0']
+- [high_pass_filter_0, '0', qtgui_sink_x_0, '0']
+- [high_pass_filter_0, '0', qtgui_time_raster_sink_x_0, '0']
+- [high_pass_filter_0, '0', qtgui_time_sink_x_0, '0']
+- [hilbert_fc_0, '0', blocks_complex_to_mag_squared_0, '0']
+- [hilbert_fc_0, '0', blocks_delay_2, '0']
+- [hilbert_fc_0, '0', blocks_stream_to_vector_1, '0']
+- [hilbert_fc_0, '0', qtgui_sink_x_0, '0']
+- [low_pass_filter_0, '0', audio_sink_0, '0']
+- [low_pass_filter_0, '0', blocks_delay_0, '0']
+- [low_pass_filter_0, '0', blocks_sub_xx_1, '0']
+- [low_pass_filter_0, '0', high_pass_filter_0, '0']
+- [low_pass_filter_0, '0', hilbert_fc_0, '0']
+- [low_pass_filter_1, '0', blocks_stream_to_vector_0, '0']
+- [low_pass_filter_1, '0', qtgui_sink_x_0, '0']
+- [low_pass_filter_1, '0', qtgui_sink_x_0_0, '0']
+- [low_pass_filter_1, '0', qtgui_waterfall_sink_x_0, '0']
+- [low_pass_filter_2, '0', epy_block_1, '1']
+- [low_pass_filter_2_0, '0', epy_block_1, '0']
+
+metadata:
+  file_format: 1
+  grc_version: 3.10.10.0
